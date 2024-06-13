@@ -1,0 +1,603 @@
+* {
+    box-sizing: border-box;
+    padding   : 0;
+    margin    : 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    font-family     : 'Open Sans', sans-serif;
+    font-size       : 16px;
+    background-color: #090909;
+ 
+}
+
+.wrapperHome {
+    background-color: #1f1f1f;
+    width           : 90%;
+    margin          : 0 auto;
+    margin-bottom   : 140px;
+    margin-top      : 80px;
+    padding-bottom  : 8%;
+    padding-top     : 1%;
+    border          : solid white 8px;
+    border-radius   : 25px;
+
+}
+
+.wrapper {
+    background-color: #1f1f1f;
+    width           : 90%;
+    margin          : 0 auto;
+    margin-bottom   : 140px;
+    margin-top      : 80px;
+    padding-bottom  : 8%;
+    padding-top     : 1%;
+    border          : solid white 8px;
+    border-radius   : 25px;
+
+}
+
+nav {
+    /* top right bottom left */
+    margin       : 2% 5% 5% 5%;
+    padding      : 0 15px;
+    border-radius: 10px;
+    border       : #F1E5AC 1px solid;
+}
+
+a {
+    color          : rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.menu,
+.submenu {
+    list-style-type: none;
+    margin-right   : 1%;
+    margin-left    : 1%;
+}
+
+.logo img {
+    width        : 150px;
+    margin-top   : 1.75%;
+    border-radius: 10px;
+}
+
+.item {
+    padding: 10px;
+}
+
+.item.button {
+    padding: 9px 5px;
+}
+
+.item a {
+    border-bottom: solid 2px transparent;
+
+}
+
+.current a {
+    border-bottom: solid 2px #F1E5AC;
+}
+
+.item a:hover {
+    border-bottom: solid 2px #F1E5AC;
+}
+
+.menu {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-evenly;
+    align-items    : center;
+}
+
+.menu li a {
+    display       : block;
+    padding-top   : 34px;
+    padding-left  : 15px;
+    padding-right : 15px;
+    padding-bottom: 32px;
+    font-size     : 20px;
+    cursor        : pointer;
+
+}
+
+/* huide pagina wordt aangeduid */
+
+.menu li.subitem a {
+    padding: 15px;
+}
+
+a.toggle {
+    width: 0px;
+}
+
+.item.button {
+    order: 2;
+}
+
+.item {
+    order        : 3;
+    width        : 100%;
+    text-align   : center;
+    display      : none;
+    border-bottom: 2px solid transparent;
+}
+
+.active .item {
+    display: block;
+}
+
+/* Submenu up from mobile screens */
+.submenu {
+    display: none;
+}
+
+.submenu-active .submenu {
+    display         : block;
+    background-color: black;
+    margin-top      : 43px;
+
+}
+
+.has-submenu i {
+    font-size: 12px;
+}
+
+.has-submenu>a::after {
+    font-family : "Font Awesome 5 Free";
+    font-size   : 12px;
+    line-height : 16px;
+    font-weight : 900;
+    content     : "\f078";
+    color       : white;
+    padding-left: 5px;
+}
+
+.subitem a {
+    padding         : 50px 15px;
+    background-color: black;
+
+}
+
+.subitem a:hover {
+    background-color: black;
+}
+
+.submenu-active {
+    background-color: #070b3d;
+    border-radius   : 3px;
+}
+
+/* Tablet menu */
+@media all and (min-width: 700px) {
+    .menu {
+        justify-content: center;
+    }
+
+    .logo {
+        flex: 1;
+    }
+
+    .item.button {
+        width  : auto;
+        order  : 1;
+        display: block;
+    }
+
+
+    /* Button up from tablet screen */
+    /* .menu li.button a {
+        padding: 10px 15px;
+        margin: 5px 0;
+      }
+      .button a {
+        background: #0080ff;
+        border: 1px royalblue solid;
+      }
+      .button.secondary {
+        border: 0;
+      }
+      .button.secondary a {
+        background: transparent;
+        border: 1px #0080ff solid;
+      }
+      .button a:hover {
+        text-decoration: none;
+      }
+      .button:not(.secondary) a:hover {
+        background: royalblue;
+        border-color: darkblue;
+      }*/
+}
+
+
+
+/* Desktop menu */
+@media all and (min-width: 1000px) {
+    .menu {
+        align-items: flex-start;
+        flex-wrap  : nowrap;
+        background : none;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .item {
+        order   : 1;
+        position: relative;
+        display : block;
+        width   : auto;
+    }
+
+    .button {
+        order: 2;
+    }
+
+    .navKnop {
+        display: none;
+    }
+
+    .submenu-active .submenu {
+        display   : block;
+        position  : absolute;
+        left      : 0;
+        top       : 68px;
+        background: #111;
+        transition: 1s;
+    }
+
+    .submenu-active {
+        border-radius: 0;
+    }
+}
+
+button {
+    background: transparent;
+    border    : none;
+}
+
+/* button one */
+
+.navKnop {
+    --button-color: #fff;
+    cursor        : pointer;
+}
+
+.navKnop .lijntje {
+    transition      : y 200ms ease-in 200ms, rotate 200ms ease-in, opacity 0ms 200ms;
+    transform-origin: center;
+}
+
+.navKnop[uitgebreid="true"] .lijntje {
+    transition: y 200ms ease-in, rotate 200ms ease-in 200ms, opacity 0ms 200ms;
+}
+
+.navKnop[uitgebreid="true"] :is(.boven, .beneden) {
+    y: 45;
+}
+
+.navKnop[uitgebreid="true"] .boven {
+    rotate: 45deg;
+}
+
+.navKnop[uitgebreid="true"] .midden {
+    opacity: 0;
+}
+
+.navKnop[uitgebreid="true"] .beneden {
+    rotate: -45deg;
+}
+
+/* -------------------- */
+
+
+/* p {
+    color: #d4af37;
+} */
+
+
+
+
+/* Reset styles */
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+
+
+
+h1 {
+    font-size : 2rem;
+    text-align: center;
+}
+
+.locatie {
+    justify-content : space-evenly;
+    padding         : 5rem 0 5rem 0;
+    background-color: #1f1f1f;
+    width           : 90%;
+    margin-top: 8rem !important;
+    margin          : 0 auto;
+    border          : solid white 8px;
+    border-radius   : 25px;
+    margin-bottom   : 8rem;
+}
+
+iframe {
+    width : 60%;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 2px #F1E5AC !important;
+}
+
+.locatie h1 {
+    color: white;
+    margin-bottom: 50px;
+    font-size : 3rem;
+    text-align: center;
+}
+
+.sections {
+    display         : flex;
+    flex-wrap       : wrap;
+    justify-content : space-evenly;
+    padding         : 5rem 0 5rem 0;
+    margin          : 0 0 5% 0;
+    background-color: #1f1f1f;
+    width           : 90%;
+    margin          : 0 auto;
+    border          : solid white 8px;
+    border-radius   : 25px;
+    margin-bottom   : 5rem;
+}
+
+section {
+    background-color: #0c0c0c;
+    border-radius   : 10px;
+    box-shadow      : 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom   : 2rem;
+    margin-top      : 1rem;
+    padding         : 1rem;
+    text-align      : center;
+    width           : 100%;
+    max-width       : 400px;
+
+}
+
+p.scroll {
+    padding      : 0 2rem;
+    margin       : 2rem 0;
+    line-height  : 1.5;
+    font-size    : 1.2rem;
+    text-align   : center;
+    height       : 300px;
+    overflow-y   : scroll;
+    margin-bottom: 25px;
+}
+
+p.scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+p.scroll::-webkit-scrollbar-track {
+    background   : #000;
+    border-radius: 10px;
+}
+
+p.scroll::-webkit-scrollbar-thumb {
+    background   : #ffeb8a;
+    border-radius: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    section {
+      max-width: 400px;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    section {
+      max-width: 400px;
+    }
+  }
+
+section img {
+    border-radius: 5px;
+    height       : 200px;
+    margin-bottom: 1rem;
+    object-fit   : cover;
+    width        : 100%;
+}
+
+h2 {
+    color        : white;
+    font-size    : 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+
+    color      : #ffffff;
+    font-size  : 1rem;
+    line-height: 1.5;
+}
+
+.titel {
+    font-size    : 100px;
+    font-weight  : 900;
+    color        : white;
+    margin-top   : 0px;
+    margin-bottom: 0px;
+    margin-left  : 25%;
+}
+
+.onderTitel {
+    font-size    : 22px;
+    font-weight  : 900;
+    color        : rgb(91, 91, 91);
+    margin-top   : 0px;
+    margin-bottom: 0px;
+    margin-left  : 25%;
+}
+
+
+
+.bbqGold {
+    width        : 40%;
+    margin-left  : 25%;
+    margin-top   : 0px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    border       : solid 2px rgb(91, 91, 91);
+}
+
+.landingContainer {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    align-items    : center;
+    width          : 100%;
+}
+
+.ontdek {
+    margin-left     : 25%;
+    margin-top      : 2rem;
+    margin-bottom   : 0px;
+    border-radius   : 10px;
+    border          : solid 1px #F1E5AC;
+    background-color: transparent;
+    color           : white;
+    padding         : 1rem;
+    text-decoration : none;
+    font-size       : 20px;
+    font-weight     : 900;
+    transition      : 0.5s;
+
+}
+
+.ontdek:hover {
+    background-color: #F1E5AC;
+    color           : black;
+    transition      : 0.5s;
+}
+
+.reviews {
+    margin-top: 2%;
+}
+
+/* media query landingcontaint display block */
+@media screen and (max-width: 800px) {
+    .landingContainer {
+        display    : block;
+        margin-left: 0 !important;
+    }
+
+    .titel {
+        font-size    : 50px;
+        font-weight  : 900;
+        color        : white;
+        margin-top   : 0px;
+        margin-bottom: 0px;
+        margin-left: 10%;
+    }
+
+    .onderTitel {
+        font-size    : 15px;
+        font-weight  : 900;
+        color        : rgb(91, 91, 91);
+        margin-top   : 0px;
+        margin-bottom: 0px;
+        margin-left: 10%;
+        margin-right: 2%;
+    }
+
+    .bbqGold {
+        margin-left  : 25%;
+        margin-top   : 2rem;
+        margin-bottom: 0px;
+        border-radius: 10px;
+        border       : solid 2px rgb(91, 91, 91);
+        margin-left: 15%;
+        width: 50%;
+    }
+
+    .ontdek {
+        margin-left: 10%;
+        padding         : 0.75rem;
+        font-size: 15px;
+    }
+
+    .wrapperHome {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        border: solid #ffffff 5px;
+    }
+
+    .sections {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        border: solid #ffffff 5px;
+        padding: 1px;
+    }
+
+    
+}
+
+@media screen and (max-width: 450px) {
+    .bbqGold {
+        margin-left  : 25%;
+        margin-top   : 2rem;
+        margin-bottom: 0px;
+        border-radius: 10px;
+        border       : solid 2px rgb(91, 91, 91);
+        margin-left: 15%;
+        width: 70%;
+    }
+
+    .sections {
+        background-color: transparent;
+        border: none;
+    }
+
+    section {
+        background-color: #1f1f1f;
+        border: solid #ffffff 5px;
+        border-radius: 20px;
+    }
+}
+
+
+@media screen and (max-width: 1500px) {
+    .reviews {
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+}
+
+
+.vuurtje {
+    position  : fixed;
+    top       : 0;
+    left      : 0;
+    width     : 100%;
+    height    : 100%;
+    z-index   : -1;
+    object-fit: cover;
+    opacity   : 0.5;
+}
+
+.copyright {
+    text-align: center;
+    color     : white;
+}

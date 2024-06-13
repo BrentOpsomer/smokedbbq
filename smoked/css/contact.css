@@ -1,0 +1,163 @@
+nav  {
+    margin       : 2% 5% 3% 5% !important; 
+}
+
+
+.title {
+    background-color: #1e1e1e;
+    padding         : 1rem;
+    width           : 400px;
+    margin          : 0 auto;
+    text-align      : center;
+    border          : 1px solid #F1E5AC;
+    border-radius   : 10px;
+}
+
+h1 {
+    font-size  : 3rem;
+    color      : #fff;
+    text-shadow: 2px 2px #1e1e1e;
+    padding    : 0;
+}
+
+.formlogo {
+    width  : 180px;
+    margin : 0 auto;
+    display: block;
+}
+
+.formLogin {
+    height          : auto;
+    max-width       : 400px;
+    background-color: #1e1e1e;
+    margin          : 0 auto;
+    border-radius   : 10px;
+    border          : 2px solid #F1E5AC;
+    box-shadow      : 0 0 40px rgba(0, 0, 0, 0.6);
+    padding         : 50px 35px;
+    color           : #fff;
+    margin-top      : 2rem;
+}
+
+.formLogin * {
+    letter-spacing: 0.5px;
+    outline       : none;
+    border        : none;
+}
+
+
+.formFrame {
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none !important;
+
+    width : 650px;
+    height: 500px;
+    display: block;
+    border-radius: 10px;
+    border: solid 2px #ffffff !important;
+}
+
+textarea {
+    max-width: 326px;
+    max-height: 400px;
+    min-width: 326px;
+}
+
+.labelUserAndPass {
+    display    : block;
+    margin-top : 30px;
+    font-size  : 16px;
+    font-weight: 500;
+    color      : #fff;
+}
+
+input {
+    background-color: #282828;
+    color           : #fff;
+    display         : block;
+    height          : 50px;
+    width           : 100%;
+    border-radius   : 3px;
+    padding         : 0 10px;
+    margin-top      : 8px;
+    font-size       : 14px;
+    font-weight     : 300;
+    border          : 1px solid #F1E5AC;
+}
+
+textarea {
+    background-color: #282828;
+    color           : #fff;
+    display         : block;
+    height          : 100px;
+    width           : 100%;
+    border-radius   : 3px;
+    padding         : 0 10px;
+    margin-top      : 8px;
+    font-size       : 14px;
+    font-weight     : 300;
+    border          : 1px solid #F1E5AC;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+.formButton {
+    margin-top      : 50px;
+    width           : 100%;
+    background-color: #F1E5AC;
+    color           : #1e1e1e;
+    padding         : 15px 0;
+    font-size       : 18px;
+    font-weight     : 600;
+    border          : none;
+    border-radius   : 5px;
+    cursor          : pointer;
+    border          : 2px solid #F1E5AC;
+}
+
+.formButton:hover {
+    background-color: #1e1e1e;
+    color           : #F1E5AC;
+    border          : 2px solid #F1E5AC;
+}
+
+@media (max-width: 800px) {
+    .wrapper {
+        border: 5px solid #ffffff !important;
+        margin-top: 10% !important;
+        margin-bottom: 10% !important;
+    }
+
+    .formFrame {
+        border: none !important;
+        width : 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .title {
+        width: 300px;
+    }
+
+    textarea {
+        max-width: 100%;
+        min-width: 50%;
+    }
+
+    .formLogin {
+        padding: 50px 15px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 350px) {
+    .title {
+        width: 200px;
+    }
+}

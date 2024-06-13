@@ -1,0 +1,161 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.footer {
+    padding         : 70px 0;
+    position        : relative;
+    margin          : 1%;
+    border-radius   : 10px;
+    border: solid 1px #F1E5AC;
+    background-color: #090909;
+    margin: 5%;
+
+}
+
+@media only screen and (max-width: 6000px) {
+    .footer {
+        position: relative;
+    }
+}
+
+.container {
+    max-width      : 1170px;
+    margin         : auto;
+    justify-content: center;
+    text-align     : center;
+}
+
+.row {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.onder {
+    font-size: 13px !important;
+}
+
+.footerKolom {
+    width     : 25%;
+    padding   : 0 15px;
+    text-align: center;
+}
+
+.footerKolom h4 {
+    font-size    : 18px;
+    color        : white;
+    margin-bottom: 35px;
+    font-weight  : 500;
+    position     : relative;
+}
+
+.footerKolom h4::before {
+    content         : '';
+    position        : absolute;
+    bottom          : -10px;
+    background-color: white;
+    height          : 2px;
+    box-sizing      : border-box;
+    width           : 50px;
+}
+
+.footerKolom ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footerKolom ul li a {
+    font-size      : 16px;
+    color          : #ffffff;
+    text-decoration: none;
+    font-weight    : 600;
+    color          : white;
+    display        : block;
+    padding        : 10px;
+    transition     : all 0.3s ease;
+}
+
+.footerKolom ul li a:hover {
+    color       : #F1E5AC;
+    padding-left: 8px;
+}
+
+.footerKolom .iconen a {
+    display   : inline-block;
+    height    : 40px;
+    width     : 40px;
+    background-color: linear-gradient(to right, #46400e, #92870b);
+    border: 1px solid #F1E5AC;
+    margin       : 0 10px 10px 0;
+    text-align   : center;
+    line-height  : 40px;
+    border-radius: 50%;
+    color        : #fff;
+    transition   : all 0.5s ease;
+}
+
+a {
+    font-weight: 300;
+}
+
+.footerKolom .iconen a:hover {
+    color           : #000000;
+    background-color: #F1E5AC;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+    .footerKolom {
+        width        : 50%;
+        margin-bottom: 30px;
+        text-align   : center;
+    }
+}
+
+@media(max-width: 574px) {
+    .footerKolom {
+        width     : 100%;
+        text-align: center;
+    }
+}
+
+.footerLogo {
+    width        : 180px;
+    margin-top   : 0.5%;
+    border-radius: 5px;
+}
+
+.footerUitleg {
+    color: white;
+}
+
+.copyR {
+    display         : flex;
+    background-color: #ffffff;
+    padding         : 30px;
+    text-align      : center;
+    align-items     : center;
+    justify-content : center;
+    text-decoration : none;
+}
+
+.copyright {
+    text-align: center;
+    padding   : 20px;
+}
+
+.copyR img {
+    width: 300px;
+}
+
+.copyright a {
+    color          : #161f7a;
+    font-weight    : 600;
+    text-decoration: none;
+}
